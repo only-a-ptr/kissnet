@@ -725,6 +725,11 @@ namespace kissnet
 			memset(static_cast<void*>(&socket_input), 0, sizeof socket_input);
 		}
 
+		SOCKET get_native()
+		{
+			return sock;
+		}
+
 		///Set the socket in non blocking mode
 		/// \param state By default "true". If put to false, it will set the socket back into blocking, normal mode
 		void set_non_blocking(bool state = true) const
